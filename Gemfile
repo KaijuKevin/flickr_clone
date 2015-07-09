@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem 'devise'
 gem "paperclip", "~> 4.3"
+gem 'kaminari'
+gem 'cancancan', '~> 1.10'
 
 group :development do
   gem 'byebug'

@@ -1,4 +1,4 @@
-<% current_user.pictures.each do |picture| %>
-<%= image_tag picture.image %>
-<%= image_tag picture.image.url(:thumb) %>
+<%= paginate @pictures %>
+<% @pictures.each do |picture| %>
+<%= image_tag picture.image.url(:medium) %>
 <% end %>

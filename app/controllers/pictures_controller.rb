@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   def index
+    @pictures = current_user.pictures.all.page(params[:page]).per(1)
   end
 
   def new
