@@ -13,6 +13,9 @@
        <% if user_signed_in? %>
          Logged in as <strong><%= current_user.email %></strong>.
          <%= link_to 'Edit profile', edit_user_registration_path %> |
+            <% if can? :manage, User %>
+             <%= link_to 'Manage Users', users_path %> |
+            <% end %>
          <%= link_to 'Show profile', user_path(current_user) %>
          <%= link_to 'Show Pictures', user_pictures_path(current_user) %>
          <%= link_to 'Add picture', new_user_picture_path(current_user) %>
